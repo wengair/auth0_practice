@@ -5,7 +5,7 @@ Following the Auth0 quickstart and implement the authentication by using `@auth0
 Update the user's avator in Auth0's database
 
 
-
+##
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
