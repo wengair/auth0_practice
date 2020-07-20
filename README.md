@@ -1,3 +1,12 @@
+## What I did so far
+Following the Auth0 quickstart and implement the authentication by using `@auth0/auth0-react`.
+
+## What I'm working on
+Update the user's avator in Auth0's database
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
