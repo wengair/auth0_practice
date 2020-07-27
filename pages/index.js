@@ -2,6 +2,7 @@ import LoginButton from '../components/LoginButton'
 import LogoutButton from '../components/LogoutButton'
 import Profile from '../components/Profile'
 import Link from 'next/link'
+import { withAuthenticationRequired } from "@auth0/auth0-react"
 
 export default function Home() {
   
@@ -14,3 +15,7 @@ export default function Home() {
   </div>
   )
 }
+
+// export default withAuthenticationRequired(index, {
+//   onRedirecting: () => <Loading />,
+// });

@@ -5,15 +5,25 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "db:migrate:create": "db-migrate create -e prod",
+    "db:migrate:up": "db-migrate up -e prod",
+    "db:migrate:down": "db-migrate down -e prod -c 1"
   },
   "dependencies": {
     "@auth0/auth0-react": "^1.0.0",
-    "express": "^4.17.1",
+    "auth0-js": "^9.13.4",
+    "cookie": "^0.4.1",
+    "cors": "^2.8.5",
+    "db-migrate": "^0.11.11",
+    "db-migrate-mysql": "^2.1.1",
     "express-jwt": "^6.0.0",
+    "express-jwt-authz": "^2.4.1",
     "jwks-rsa": "^1.8.1",
     "next": "9.4.4",
+    "next-connect": "^0.8.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "sqlstring": "^2.3.2"
   }
 }

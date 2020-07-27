@@ -13,6 +13,7 @@ function index() {
   )
 }
 
-export default withAuthenticationRequired(index, {
-  onRedirecting: () => <Loading />,
-});
+// export default withAuthenticationRequired(index, {
+//   onRedirecting: () => <Loading />,
+// });
+export default index

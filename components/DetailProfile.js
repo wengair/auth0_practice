@@ -9,14 +9,16 @@ function DetailProfile() {
   console.log(user)
   useEffect(() => {
     const getUserMetadata = async () => {
-      const domain = "madcollective.us.auth0.com"
+      const domain = process.env.DOMAIN
   
       try {
         const accessToken = await getAccessTokenSilently({
           audience: `https://${domain}/api/v2/`,
-          scope: "read:current_user",
+          scope: "read:current_user update:current_user_metadata read:users",
         })
-  
+        console.log('in detail profile token=')
+        console.log(accessToken)
+        localStorage.setItem('accessToken', accessToken)
         const userDetailsByIdUrl = `https://${domain}/api/v2/users/${user.sub}`
   
         const metadataResponse = await fetch(userDetailsByIdUrl, {
@@ -28,6 +30,7 @@ function DetailProfile() {
         const { user_metadata } = await metadataResponse.json()
   
         setUserMetadata(user_metadata)
+
       } catch (e) {
         console.log(e.message)
       }
@@ -44,7 +47,9 @@ function DetailProfile() {
         <p>{user.email}</p>
         <h3>User Metadata</h3>
         {userMetadata ? (
-          <pre>{JSON.stringify(userMetadata, null, 2)}</pre>
+          <pre>{JSON.stringify(userMetadata, null, 2)}
+          {console.log("userMetadata=")}
+          {console.log(userMetadata)}</pre>
         ) : (
           "No user metadata defined"
         )}
