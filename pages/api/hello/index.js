@@ -13,10 +13,10 @@ export default addScope(cookies(applySiteMiddleware( async(req, res) => {
       // res.statusCode = 200
       // res.json({ name: 'John Doeeeae' , method: 'get'})
 
-      // res.cookie('Next.js', 'api-middleware!')
-      // res.end(res.getHeader('Set-Cookie'))
       
       const accessToken = await getAccessToken()
+      res.cookie('accessToken', accessToken)
+      // res.end(res.getHeader('Set-Cookie'))
       const rawUsers = await getUsers(accessToken)
       let users = rawUsers.map(user => { return {name:user.name, user_id:user.user_id} })
       // console.log("result=")
