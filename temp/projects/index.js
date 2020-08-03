@@ -1,4 +1,4 @@
-import applySiteMiddleware from '../../lib/init-middleware'
+import applySiteMiddleware from 'clients/lib/init-middleware'
 
 export default applySiteMiddleware( (req, res) => {
   res.statusCode = 200

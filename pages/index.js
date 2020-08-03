@@ -1,6 +1,6 @@
-import LoginButton from '../components/LoginButton'
-import LogoutButton from '../components/LogoutButton'
-import Profile from '../components/Profile'
+import LoginButton from '../clients/components/LoginButton'
+import LogoutButton from '../clients/components/LogoutButton'
+import Profile from '../clients/components/Profile'
 import Link from 'next/link'
 import { withAuthenticationRequired } from "@auth0/auth0-react"
 

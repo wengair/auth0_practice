@@ -1,7 +1,23 @@
-## What I did so far
+## Week 7 
+### done
+- Create/Alter tables in migration (/migrations) using `db-migrate`
+- Build seed (/migrations/seed/seed.js) using `mysql2` and add script `db:seed`
+- Build entity and repository for project (/clients/project/project-repo.js)
+- Build `useCheckExpire` hook to make sure the token alive before passing to repository (/clients/hooks/useCheckExpire)
+- Build client and project endpoints (GET only) (/pages/api/v1/clients & projects)
+- Build a simple page to show the endpoint result (/pages/projects/index.js)
+- Add `getAccessToken` to middleware to make sure the machine-to-machine token alive before getting user info from Auth0 (/clients/lib/init-middleware.js)
+
+### Working on
+- Use `Promise.all` to get info from different repo and show them in the `projects/:id` page 
+
+(/pages/projects/\[id\]/index.js, /pages/api/v1/projects/\[id\]/processlists/index.js)
+
+## Week 5 
+### done
 Following the Auth0 quickstart and implement the authentication by using `@auth0/auth0-react`.
 
-## What I'm working on
+### Working on
 Update the user's avator in Auth0's database
 
 

@@ -1,5 +1,5 @@
 import nextConnect from 'next-connect'
-import applySiteMiddleware from '../../lib/init-middleware'
+import applySiteMiddleware from 'clients/lib/init-middleware'
  
 const handler = nextConnect()
 console.log('in /pages/api/index.js')

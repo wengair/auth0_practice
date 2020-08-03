@@ -1,8 +1,8 @@
 import React from 'react'
-import DetailProfile from '../../components/DetailProfile'
-import UpdateProfilePic from '../../components/UpdateProfilePic'
+import DetailProfile from 'clients/components/DetailProfile'
+import UpdateProfilePic from 'clients/components/UpdateProfilePic'
 import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react"
-import Loading from "../../components/Loading";
+import Loading from "clients/components/Loading";
 
 function index() {
   return (
@@ -13,7 +13,7 @@ function index() {
   )
 }
 
-// export default withAuthenticationRequired(index, {
-//   onRedirecting: () => <Loading />,
-// });
-export default index
+export default withAuthenticationRequired(index, {
+  onRedirecting: () => <Loading />,
+});
+// export default index

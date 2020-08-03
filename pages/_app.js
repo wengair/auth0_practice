@@ -16,7 +16,7 @@ function App({ Component, pageProps }) {
     audience="https://madcollective.us.auth0.com/api/v2/"
     // audience="https://madcollective.api.com/test/"
     // audience="urn:auth0-authz-api"
-    scope="read:current_user update:current_user read:users"
+    scope="read:current_user update:current_user read:users offline_access"
     // onRedirectCallback={onRedirectCallback}
     >
       <Component {...pageProps} />
